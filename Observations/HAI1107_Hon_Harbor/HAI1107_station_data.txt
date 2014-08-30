@@ -1,0 +1,34 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1107                       
+Station Name:                           Approach to Honolulu Harbor   
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               21° 17.488' N                 
+Longitude:                              157° 52.426' W                
+Deployment/Recovery Dates (UTC):        Jan 6, 2011 17:59:00 / Apr 7, 2011 20:09:00
+Approximate Station Depth *:            48.9ft / 14.90m               
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19369                         
+Approximate Flood Direction (deg true): 70.0                          
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+40.0ft                                  12.19m                        
+36.7ft                                  11.19m                        
+33.4ft                                  10.18m                        
+30.2ft                                  9.20m                         
+26.9ft                                  8.20m                         
+23.6ft                                  7.19m                         
+20.3ft                                  6.19m                         
+17.0ft                                  5.18m                         
+13.7ft                                  4.18m                         
+10.5ft                                  3.20m                         
+7.2ft                                   2.19m                         

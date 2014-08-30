@@ -1,0 +1,45 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1116                       
+Station Name:                           Kalohi Channel                
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               21° 0.198' N                  
+Longitude:                              156° 57.530' W                
+Deployment/Recovery Dates (UTC):        Jan 8, 2011 18:40:00 / Apr 2, 2011 16:45:00
+Approximate Station Depth *:            344.7ft / 105.06m             
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19351                         
+Approximate Flood Direction (deg true): 300.0                         
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+237.4ft                                 72.36m                        
+227.5ft                                 69.34m                        
+217.7ft                                 66.36m                        
+207.8ft                                 63.34m                        
+198.0ft                                 60.35m                        
+188.2ft                                 57.36m                        
+178.3ft                                 54.35m                        
+168.5ft                                 51.36m                        
+158.6ft                                 48.34m                        
+148.8ft                                 45.35m                        
+138.9ft                                 42.34m                        
+129.1ft                                 39.35m                        
+119.3ft                                 36.36m                        
+109.4ft                                 33.35m                        
+99.6ft                                  30.36m                        
+89.7ft                                  27.34m                        
+79.9ft                                  24.35m                        
+70.0ft                                  21.34m                        
+60.2ft                                  18.35m                        
+50.4ft                                  15.36m                        
+40.5ft                                  12.34m                        
+30.7ft                                  9.36m                         

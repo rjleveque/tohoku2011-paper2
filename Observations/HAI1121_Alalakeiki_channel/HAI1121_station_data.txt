@@ -1,0 +1,51 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1121                       
+Station Name:                           Alalakeiki Channel            
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               20° 36.751' N                 
+Longitude:                              156° 30.487' W                
+Deployment/Recovery Dates (UTC):        Feb 18, 2011 02:30:00 / Apr 6, 2011 02:33:00
+Approximate Station Depth *:            505.2ft / 153.98m             
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19347                         
+Approximate Flood Direction (deg true): 330.0                         
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+409.8ft                                 124.91m                       
+396.7ft                                 120.91m                       
+383.6ft                                 116.92m                       
+370.5ft                                 112.93m                       
+357.3ft                                 108.91m                       
+344.2ft                                 104.91m                       
+331.1ft                                 100.92m                       
+318.0ft                                 96.93m                        
+304.9ft                                 92.93m                        
+291.7ft                                 88.91m                        
+278.6ft                                 84.92m                        
+265.5ft                                 80.92m                        
+252.4ft                                 76.93m                        
+239.2ft                                 72.91m                        
+226.1ft                                 68.92m                        
+213.0ft                                 64.92m                        
+199.9ft                                 60.93m                        
+186.7ft                                 56.91m                        
+173.6ft                                 52.91m                        
+160.5ft                                 48.92m                        
+147.4ft                                 44.93m                        
+134.3ft                                 40.93m                        
+121.1ft                                 36.91m                        
+108.0ft                                 32.92m                        
+94.9ft                                  28.93m                        
+81.8ft                                  24.93m                        
+68.6ft                                  20.91m                        
+55.5ft                                  16.92m                        

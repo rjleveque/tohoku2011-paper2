@@ -1,0 +1,52 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1119                       
+Station Name:                           Auau Channel, East Side       
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               20° 52.036' N                 
+Longitude:                              156° 44.830' W                
+Deployment/Recovery Dates (UTC):        Feb 15, 2011 00:29:00 / Apr 6, 2011 23:15:00
+Approximate Station Depth *:            241.2ft / 73.51m              
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19347                         
+Approximate Flood Direction (deg true): 160.0                         
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+209.6ft                                 63.89m                        
+203.1ft                                 61.91m                        
+196.5ft                                 59.89m                        
+189.9ft                                 57.88m                        
+183.4ft                                 55.90m                        
+176.8ft                                 53.89m                        
+170.2ft                                 51.88m                        
+163.7ft                                 49.90m                        
+157.1ft                                 47.88m                        
+150.6ft                                 45.90m                        
+144.0ft                                 43.89m                        
+137.4ft                                 41.88m                        
+130.9ft                                 39.90m                        
+124.3ft                                 37.89m                        
+117.7ft                                 35.88m                        
+111.2ft                                 33.89m                        
+104.6ft                                 31.88m                        
+98.1ft                                  29.90m                        
+91.5ft                                  27.89m                        
+84.9ft                                  25.88m                        
+78.4ft                                  23.90m                        
+71.8ft                                  21.88m                        
+65.3ft                                  19.90m                        
+58.7ft                                  17.89m                        
+52.1ft                                  15.88m                        
+45.6ft                                  13.90m                        
+39.0ft                                  11.89m                        
+32.4ft                                  9.88m                         
+25.9ft                                  7.89m                         

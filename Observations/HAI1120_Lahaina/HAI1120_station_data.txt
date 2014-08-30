@@ -1,0 +1,37 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1120                       
+Station Name:                           Lahaina                       
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               20° 52.107' N                 
+Longitude:                              156° 41.117' W                
+Deployment/Recovery Dates (UTC):        Feb 15, 2011 01:08:00 / Apr 2, 2011 23:16:00
+Approximate Station Depth *:            67.2ft / 20.48m               
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19348                         
+Approximate Flood Direction (deg true): 140.0                         
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+49.1ft                                  14.97m                        
+45.8ft                                  13.96m                        
+42.6ft                                  12.98m                        
+39.3ft                                  11.98m                        
+36.0ft                                  10.97m                        
+32.7ft                                  9.97m                         
+29.4ft                                  8.96m                         
+26.1ft                                  7.96m                         
+22.9ft                                  6.98m                         
+19.6ft                                  5.97m                         
+16.3ft                                  4.97m                         
+13.0ft                                  3.96m                         
+9.7ft                                   2.96m                         
+6.5ft                                   1.98m                         

@@ -1,0 +1,31 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1123                       
+Station Name:                           Kahului Harbor                
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               20° 54.128' N                 
+Longitude:                              156° 28.305' W                
+Deployment/Recovery Dates (UTC):        Feb 15, 2011 17:40:00 / Apr 3, 2011 18:50:00
+Approximate Station Depth *:            46.0ft / 14.02m               
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -9                        
+Sample Interval:                        6 min                         
+Time Meridian:                          135 W                         
+NOAA Chart #:                           19342                         
+Approximate Flood Direction (deg true): 190.0                         
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+37.1ft                                  11.31m                        
+33.8ft                                  10.30m                        
+30.5ft                                  9.30m                         
+27.3ft                                  8.32m                         
+24.0ft                                  7.32m                         
+20.7ft                                  6.31m                         
+17.4ft                                  5.30m                         
+14.1ft                                  4.30m                         

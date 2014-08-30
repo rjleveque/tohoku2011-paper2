@@ -1,0 +1,57 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1118                       
+Station Name:                           Hawea Point                   
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               21° 0.107' N                  
+Longitude:                              156° 41.509' W                
+Deployment/Recovery Dates (UTC):        Feb 15, 2011 02:18:00 / Apr 3, 2011 00:55:00
+Approximate Station Depth *:            274.6ft / 83.69m              
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19347                         
+Approximate Flood Direction (deg true): 220.0                         
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+243.0ft                                 74.07m                        
+236.5ft                                 72.09m                        
+229.9ft                                 70.07m                        
+223.3ft                                 68.06m                        
+216.8ft                                 66.08m                        
+210.2ft                                 64.07m                        
+203.6ft                                 62.06m                        
+197.1ft                                 60.08m                        
+190.5ft                                 58.06m                        
+184.0ft                                 56.08m                        
+177.4ft                                 54.07m                        
+170.8ft                                 52.06m                        
+164.3ft                                 50.08m                        
+157.7ft                                 48.07m                        
+151.1ft                                 46.06m                        
+144.6ft                                 44.07m                        
+138.0ft                                 42.06m                        
+131.5ft                                 40.08m                        
+124.9ft                                 38.07m                        
+118.3ft                                 36.06m                        
+111.8ft                                 34.08m                        
+105.2ft                                 32.07m                        
+98.7ft                                  30.08m                        
+92.1ft                                  28.07m                        
+85.5ft                                  26.06m                        
+79.0ft                                  24.08m                        
+72.4ft                                  22.07m                        
+65.8ft                                  20.06m                        
+59.3ft                                  18.07m                        
+52.7ft                                  16.06m                        
+46.2ft                                  14.08m                        
+39.6ft                                  12.07m                        
+33.0ft                                  10.06m                        
+26.5ft                                  8.08m                         

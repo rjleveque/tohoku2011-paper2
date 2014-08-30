@@ -1,0 +1,41 @@
+STATION INFORMATION
+
+Data Type:                              Currents                      
+Station ID:                             HAI1122                       
+Station Name:                           Maalaea Bay                   
+Project:                                Hawaii 2011 Current Observation Project
+Latitude:                               20° 45.915' N                 
+Longitude:                              156° 29.541' W                
+Deployment/Recovery Dates (UTC):        Feb 18, 2011 03:40:00 / Apr 6, 2011 04:05:00
+Approximate Station Depth *:            163.5ft / 49.83m              
+Sensor Orientation:                     Up (Bottom-Mounted)           
+Time Zone:                              UTC -10                       
+Sample Interval:                        6 min                         
+Time Meridian:                          150 W                         
+NOAA Chart #:                           19347                         
+Approximate Flood Direction (deg true): 30.0                          
+
+* The elevation cannot be linked, connected or related to any tidal or geodetic 
+datum published by NOS. 
+
+Data is available for the following depths:
+
+Approximate Depth (feet)                Approximate Depth (meters)    
+131.6ft                                 40.11m                        
+125.1ft                                 38.13m                        
+118.5ft                                 36.12m                        
+111.9ft                                 34.11m                        
+105.4ft                                 32.13m                        
+98.8ft                                  30.11m                        
+92.3ft                                  28.13m                        
+85.7ft                                  26.12m                        
+79.1ft                                  24.11m                        
+72.6ft                                  22.13m                        
+66.0ft                                  20.12m                        
+59.4ft                                  18.11m                        
+52.9ft                                  16.12m                        
+46.3ft                                  14.11m                        
+39.8ft                                  12.13m                        
+33.2ft                                  10.12m                        
+26.6ft                                  8.11m                         
+20.1ft                                  6.13m                         
