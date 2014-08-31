@@ -245,12 +245,12 @@ def setrun(claw_pkg='geoclaw'):
     gauges = rundata.gaugedata.gauges 
     # for gauges append lines of the form  [gaugeno, x, y, t1, t2]
 
-    gauges.append([1125, 204.91802, 19.74517, 7.0*3600., 1.e9]) #Hilo
-    gauges.append([1126, 204.93003, 19.74167, 7.0*3600., 1.e9]) #Hilo
-    # gauges.append([11261, 204.93003, 19.739, 7.0*3600., 1.e9])
+    gauges.append([1125, 204.91802, 19.74517, 7.5*3600., 1.e9]) #Hilo
+    gauges.append([1126, 204.93003, 19.74167, 7.5*3600., 1.e9]) #Hilo
+    # gauges.append([11261, 204.93003, 19.739, 7.5*3600., 1.e9])
     # #Hilo
     # Tide gauge:
-    gauges.append([7760, 204.9437, 19.7306,  7.0*3600., 1.e9]) #Hilo
+    gauges.append([7760, 204.9437, 19.7306,  7.5*3600., 1.e9]) #Hilo
 
 
 
@@ -345,7 +345,7 @@ def setrun(claw_pkg='geoclaw'):
     regions.append([1, 3, 5.*3600.,  8.*3600., 180., 220., 5., 40.])
     regions.append([4, 4, 7.*3600., 1e9, 204,205.5,19.4,20.4])
     regions.append([5, 5, 7.3*3600., 1e9, 204.85, 205, 19.68, 19.85])
-    regions.append([6, 6, 7.5*3600., 1e9, 204.905,204.95,19.72,19.745])
+    regions.append([6, 6, 7.3*3600., 1e9, 204.905,204.95,19.72,19.745])
     
 
 
