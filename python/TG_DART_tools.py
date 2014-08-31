@@ -436,9 +436,9 @@ def fit_tide_harmonic(t, eta, periods, t0=0, svd_tol=0.01):
 
     eta_fit = numpy.dot(A,c)
 
-    residual = eta - eta_fit
-    print "Norm of residual: ",norm(residual,2)
-    print "Norm of amplitudes: ",norm(c[1:],2)
+    # residual = eta - eta_fit
+    # print "Norm of residual: ",norm(residual,2)  # might return NaN
+    # print "Norm of amplitudes: ",norm(c[1:],2)
     
     return eta_fit, amplitude, phase, offset
     
