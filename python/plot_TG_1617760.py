@@ -9,7 +9,7 @@ save_plot = True
 
 TGdir = os.path.abspath('../TideGauges')
 outdir = '../Runs/HAI1125-26/_output'
-outdir = '/Users/rjl/git/tohoku2011/Runs/HAI1125-26/_output_americano'
+outdir = '/Users/rjl/git/tohoku2011/Runs_claw5/HAI1125-26/_mocha_28apr14'
 
 g_obs = numpy.loadtxt(os.path.join(TGdir, 'TG_1617760_detided.txt'))
 
