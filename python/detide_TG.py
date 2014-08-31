@@ -1,11 +1,14 @@
 
+import os
 import numpy
 import matplotlib.pyplot as plt
 import TG_DART_tools as TG
 
-download_data = False
-save_detided_txt = False
+download_data = True
+save_detided_txt = True
 save_plot = True
+
+TGdir = os.path.abspath('../TideGauges')
 
 def detide_all():
 
@@ -21,7 +24,7 @@ def detide_all():
 
     for k,gaugeno in enumerate([1612340, 1615680, 1617760]):
 
-        fname = "TG_%s_raw.csv" % gaugeno
+        fname = os.path.join(TGdir, "TG_%s_raw.csv" % gaugeno)
 
         if download_data:
             TG.get_coops_gauge(gaugeno, "20110311","20110313",file_name=fname, 
@@ -36,8 +39,8 @@ def detide_all():
                 TG.fit_tide_harmonic(thours, eta, periods=p, t0=0, svd_tol=1e-5)
 
         if save_detided_txt:
-            fname = "TG_%s_detided.txt" % gaugeno
-            d = numpy.vstack((tsec, eta)).T
+            fname = os.path.join(TGdir, "TG_%s_detided.txt" % gaugeno)
+            d = numpy.vstack((tsec, eta-eta_fit)).T
             numpy.savetxt(fname, d)
 
         plt.figure(1)
@@ -59,11 +62,11 @@ def detide_all():
 
     plt.show()
     if save_plot:
-        fname = "TG_raw.png"
+        fname = os.path.join(TGdir, "TG_raw.png")
         plt.figure(1)
         plt.savefig(fname)
         print "Created ",fname
-        fname = "TG_detided.png"
+        fname = os.path.join(TGdir, "TG_detided.png")
         plt.figure(2)
         plt.savefig(fname)
         print "Created ",fname
