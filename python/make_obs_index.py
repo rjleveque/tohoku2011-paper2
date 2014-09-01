@@ -7,11 +7,11 @@ import os,sys,glob
 import velocities as V
 from gaugedirs import set_gauges
 
-obsdir = os.path.abspath('../Observations')
+os.chdir("../Observations")
 gaugenos, HAIdirs, rundirs = set_gauges()
 
 
-index_file = os.path.join(obsdir, 'index.html')
+index_file = 'index.html'
 
 html = open(index_file,'w')
 html.write("""
@@ -24,14 +24,34 @@ html.write("""
         <ul>
         """)
 
+detide_file = 'detide.html'
+
+htmld = open(detide_file,'w')
+htmld.write("""
+        <html>
+        <body>
+        <h1>Detiding results</h1>
+        <p>
+        Comparison of detiding using harmonic consituents vs. 15 degree
+        polynomial.
+        <ul>
+        """)
+
 for gaugeno in gaugenos:
-    dir = os.path.join(obsdir, HAIdirs[gaugeno])
+    dir = HAIdirs[gaugeno]
 
     html.write("""
         <p>
         <li><a href="%s/plots.html">%s</a><p>
         <img src="%s/fig14.png" height=300>
         <img src="%s/fig13.png" height=300>
+        """ % (dir,dir,dir,dir))
+    
+    htmld.write("""
+        <p>
+        <li><a href="%s/plots.html">%s</a><p>
+        <img src="%s/u_detided.png" width=600>
+        <img src="%s/v_detided.png" width=600>
         """ % (dir,dir,dir,dir))
     
     subdir_index_file = os.path.join(dir,'plots.html')
@@ -75,6 +95,8 @@ for gaugeno in gaugenos:
     print "Created ",subdir_index_file
     
 html.close()
+htmld.close()
 
 print "Created ",index_file
+print "Created ",detide_file
             
