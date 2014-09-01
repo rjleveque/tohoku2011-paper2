@@ -3,6 +3,12 @@ Detide the observations two different ways, using the dominant harmonic
 constituents, and with a high degree polynomial. 
 """
 
+try:
+    matplotlib  # see if it's already been imported (interactive session)
+except:
+    import matplotlib
+    matplotlib.use('Agg')  # set to image backend 
+
 from pylab import find
 import os
 import numpy

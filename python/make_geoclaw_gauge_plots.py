@@ -3,10 +3,13 @@
 Create gauge plots comparing computed to measured.
 """
 
-import os,sys
-import matplotlib
-#matplotlib.use('Agg')
+try:
+    matplotlib  # see if it's already been imported (interactive session)
+except:
+    import matplotlib
+    matplotlib.use('Agg')  # set to image backend 
 
+import os,sys
 from make_gauges import make_figs
 from gaugedirs import set_gauges
 from clawpack.visclaw.data import ClawPlotData
@@ -117,7 +120,7 @@ outdirs = {}
            
 if 1:
     gaugenos = gaugenos + [1107] 
-    outdirs[1107] = '_americano_1sep14'
+    outdirs[1107] = '_output'
 
 if 1:
     gaugenos = gaugenos + [1116,1118,1119,1120,1121,1122]
@@ -126,12 +129,12 @@ if 1:
 
 if 1:
     gaugenos = gaugenos + [1123] 
-    outdirs[1123] = '_mocha_1sep14'
+    outdirs[1123] = '_output'
 
 if 1:
     gaugenos = gaugenos + [1125,1126] 
     for gaugeno in gaugenos:
-        outdirs[gaugeno] = '_americano_31aug14'
+        outdirs[gaugeno] = '_output'
 
 for gaugeno in gaugenos:
     rundir = Runs + rundirs[gaugeno]

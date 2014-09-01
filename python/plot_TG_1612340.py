@@ -1,4 +1,10 @@
 
+try:
+    matplotlib  # see if it's already been imported (interactive session)
+except:
+    import matplotlib
+    matplotlib.use('Agg')  # set to image backend 
+
 import os
 import numpy
 import matplotlib.pyplot as plt

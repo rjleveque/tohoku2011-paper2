@@ -1,6 +1,5 @@
 """
-Script to plot all velocity data from all gauges in directories given
-by the list dirs.
+Script to create index html files for viewing all the observation data.
 """
 
 import os,sys,glob

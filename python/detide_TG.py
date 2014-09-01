@@ -1,3 +1,14 @@
+"""
+Detide tide gauge data from the three gauges in harbors.
+Set booleans below to specify whether new data should be downloaded,
+detided data saved, and/or plots saved.
+"""
+
+try:
+    matplotlib  # see if it's already been imported (interactive session)
+except:
+    import matplotlib
+    matplotlib.use('Agg')  # set to image backend 
 
 import os
 import numpy
