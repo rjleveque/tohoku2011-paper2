@@ -15,9 +15,9 @@ def make_fgmax_grid1():
     FG.y1 = 20.4
     FG.y2 = 21.4
     FG.dx = 1./(240.)    # 15 arcssecond grid
-    FG.tstart_max =  7.5*3600.     # when to start monitoring max values
+    FG.tstart_max =  6.5*3600.     # when to start monitoring max values
     FG.tend_max = 1.e10       # when to stop monitoring max values
-    FG.dt_check = 30.         # target time (sec) increment between updating 
+    FG.dt_check = 15.         # target time (sec) increment between updating 
                                # max values
     FG.min_level_check = 5    # which levels to monitor max on
     FG.arrival_tol = 1.e-2    # tolerance for flagging arrival
