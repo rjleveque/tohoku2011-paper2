@@ -6,7 +6,7 @@ from clawpack.geoclaw import fgmax_tools
 
 
 def make_fgmax_grid1():
-    fg = fgmax_tools.fgmax()
+    fg = fgmax_tools.FGmaxGrid()
     fg.point_style = 2       # will specify a 2d grid of points
     fg.x1 = 202.6
     fg.x2 = 204.2
