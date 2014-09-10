@@ -2,6 +2,11 @@
 Plot fgmax output from GeoClaw run.
 
 """
+try:
+    matplotlib  # see if it's already been imported (interactive session)
+except:
+    import matplotlib
+    matplotlib.use('Agg')  # set to image backend
 
 
 from pylab import *
@@ -30,18 +35,18 @@ bounds = [0,.25,.5,.75,1,2,3,4]
 cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[0,0,1],\
                  [1,.7,.7], [1,.4,.4], [1,0,0]])
 norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-contourf(fg.x,fg.y,fg.s,bounds,cmap=cmap,norm=norm,extend='max')
+contourf(fg.X,fg.Y,fg.s,bounds,cmap=cmap,norm=norm,extend='max')
 cb = colorbar(extend='max')
 cb.set_label('meters / sec')
 
-contour(fg.x,fg.y,fg.s,bounds,colors='w')
-contour(fg.x,fg.y,fg.B,[0],colors='k')
+contour(fg.X,fg.Y,fg.s,bounds,colors='w')
+contour(fg.X,fg.Y,fg.B,[0],colors='k')
 
 ticklabel_format(format='plain',useOffset=False)
 #title('Maximum speed s')
 xticks(rotation=20,fontsize=15)
 yticks(fontsize=15)
-gca().set_aspect(1./cos(21*pi/180.))
+gca().set_aspect(1./cos(fg.Y.mean()*pi/180.))
 ylim(21.28,21.3313)
 
 add_gauges(False)
@@ -54,12 +59,12 @@ bounds = [-1e10,0,1e10]
 cmap = mpl.colors.ListedColormap([[1,1,1],[0,1,0]])
 figure(2, figsize=(10,7))
 norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-contourf(fg.x,fg.y,fg.B,bounds,cmap=cmap,norm=norm,extend='max')
-contour(fg.x,fg.y,fg.B,[0],colors='k')
+contourf(fg.X,fg.Y,fg.B,bounds,cmap=cmap,norm=norm,extend='max')
+contour(fg.X,fg.Y,fg.B,[0],colors='k')
 ticklabel_format(format='plain',useOffset=False)
 xticks(rotation=20,fontsize=15)
 yticks(fontsize=15)
-gca().set_aspect(1./cos(21*pi/180.))
+gca().set_aspect(1./cos(fg.Y.mean()*pi/180.))
 ylim(21.28,21.3313)
 
 add_gauges()
