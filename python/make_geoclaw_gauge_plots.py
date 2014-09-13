@@ -118,23 +118,23 @@ gaugenos = []  # initialize empty, add to below.
 
 outdirs = {}  
            
-if 1:
+if 0:
     gaugenos = gaugenos + [1107] 
     outdirs[1107] = '_output'
 
-if 1:
+if 0:
     gaugenos = gaugenos + [1116,1118,1119,1120,1121,1122]
     for gaugeno in gaugenos:
         outdirs[gaugeno] = '_output'
 
-if 1:
+if 0:
     gaugenos = gaugenos + [1123] 
     outdirs[1123] = '_output'
 
 if 1:
     gaugenos = gaugenos + [1125,1126] 
     for gaugeno in gaugenos:
-        outdirs[gaugeno] = '_output'
+        outdirs[gaugeno] = '_mocha_11sep14'
 
 for gaugeno in gaugenos:
     rundir = Runs + rundirs[gaugeno]

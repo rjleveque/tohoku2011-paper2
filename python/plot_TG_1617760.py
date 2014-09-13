@@ -14,8 +14,7 @@ from clawpack.visclaw.data import ClawPlotData
 save_plot = True
 
 TGdir = os.path.abspath('../TideGauges')
-outdir = '../Runs/HAI1125-26/_output'
-outdir = '/Users/rjl/git/tohoku2011/Runs_claw5/HAI1125-26/_mocha_28apr14'
+outdir = '../Runs/HAI1125-26/_americano_31aug14'
 
 g_obs = numpy.loadtxt(os.path.join(TGdir, 'TG_1617760_detided.txt'))
 
@@ -37,7 +36,7 @@ g = plotdata.getgauge(7760)
 # shift by 10 minutes:
 thour = (g.t + 600.) / 3600.
 plt.plot(thour, g.q[3,:],'r',linewidth=2,label='GeoClaw')
-plt.xlim(7,13)
+plt.xlim(7.5,13)
 plt.ylim(-2,1.5)
 plt.legend(loc='lower right')
 plt.xticks(range(8,14),fontsize=15)
