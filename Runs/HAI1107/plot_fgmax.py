@@ -15,13 +15,17 @@ import os
 from clawpack.geoclaw import fgmax_tools
 
 def add_gauges(label=True):
-    plot([202.12623],[21.29147],'ko',markersize=8)
+    plot([202.12623],[21.29147],'wo',markersize=8)
+    plot([202.12623],[21.29147],'k+',markersize=8)
     if label: text(202.125,21.2885,'1107',fontsize=15)
-    plot([202.1333333],[21.30666667],'ko',markersize=8)
+    plot([202.1333333],[21.30666667],'wo',markersize=8)
+    plot([202.1333333],[21.30666667],'k+',markersize=8)
     if label: text(202.130,21.306,'TG',fontsize=15)
-    plot([202.1035], [21.302],'ko',markersize=8)
+    plot([202.1035], [21.302],'wo',markersize=8)
+    plot([202.1035], [21.302],'k+',markersize=8)
     if label: text(202.102,21.299,'S1',fontsize=15)
-    plot([202.135], [21.288],'ko',markersize=8)
+    plot([202.135], [21.288],'wo',markersize=8)
+    plot([202.135], [21.288],'k+',markersize=8)
     if label: text(202.136,21.286,'KN',fontsize=15)
 
 

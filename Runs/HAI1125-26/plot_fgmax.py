@@ -18,15 +18,17 @@ def add_gauges(label=True):
     fs = 15
     dy = -.002
     xy = [204.91802, 19.74517]
-    plot([xy[0]], [xy[1]], 'ko',markersize=8)
+    plot([xy[0]], [xy[1]], 'wo',markersize=8)
+    plot([xy[0]], [xy[1]], 'k+',markersize=8)
     if label: text(xy[0], xy[1]+dy, '1125',fontsize=fs)
     xy = [204.93003, 19.74167]
-    plot([xy[0]], [xy[1]], 'ko',markersize=8)
+    plot([xy[0]], [xy[1]], 'wo',markersize=8)
+    plot([xy[0]], [xy[1]], 'k+',markersize=8)
     if label: text(xy[0], xy[1]+dy, '1126',fontsize=fs)
 
 fg = fgmax_tools.FGmaxGrid()
 fg.read_input_data('fgmax1.txt')
-fg.read_output(outdir='_americano_31aug14')
+fg.read_output(outdir='_americano_10sep14')
 
 figure(1, figsize=(10,7))
 

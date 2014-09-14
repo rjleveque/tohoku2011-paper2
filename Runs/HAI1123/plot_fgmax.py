@@ -16,9 +16,11 @@ from clawpack.geoclaw import fgmax_tools
 
 
 def add_gauges(label=True):
-    plot([203.52825],[20.9021333],'ko',markersize=8)
+    plot([203.52825],[20.9021333],'wo',markersize=8)
+    plot([203.52825],[20.9021333],'k+',markersize=8)
     if label: text(203.529,20.9023,'1123',fontsize=15)
-    plot([203.530944],[20.895],'ko',markersize=8)
+    plot([203.530944],[20.895],'wo',markersize=8)
+    plot([203.530944],[20.895],'k+',markersize=8)
     if label: text(203.5293,20.8951,'TG',fontsize=15)
 
 fg = fgmax_tools.FGmaxGrid()
