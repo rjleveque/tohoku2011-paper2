@@ -41,9 +41,11 @@ plt.ylim(-2,1.5)
 plt.legend(loc='lower right')
 plt.xticks(range(8,14),fontsize=15)
 plt.yticks(fontsize=15)
+plt.xlabel('Hours post-quake')
+plt.ylabel('meters')
 plt.title('Surface elevation at TG 1617760',fontsize=15)
 
 if save_plot:
-    fname = os.path.join(TGdir, "TG_1617760_compare.png")
+    fname = "../Figures/TG_1617760_compare.png"
     plt.savefig(fname)
     print "Created ",fname

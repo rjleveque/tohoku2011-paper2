@@ -35,15 +35,15 @@ fg.read_output(outdir='_americano_1sep14')
 
 figure(1, figsize=(10,7))
 
-bounds = [0,.25,.5,.75,1,2,3,4]
+bounds = 100*array([0,.25,.5,.75,1,2,3,4])
 cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[0,0,1],\
                  [1,.7,.7], [1,.4,.4], [1,0,0]])
 norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-contourf(fg.X,fg.Y,fg.s,bounds,cmap=cmap,norm=norm,extend='max')
+contourf(fg.X,fg.Y,100*fg.s,bounds,cmap=cmap,norm=norm,extend='max')
 cb = colorbar(extend='max')
-cb.set_label('meters / sec')
+cb.set_label('cm / sec')
 
-contour(fg.X,fg.Y,fg.s,bounds,colors='w')
+contour(fg.X,fg.Y,100*fg.s,bounds,colors='w')
 contour(fg.X,fg.Y,fg.B,[0],colors='k')
 
 ticklabel_format(format='plain',useOffset=False)

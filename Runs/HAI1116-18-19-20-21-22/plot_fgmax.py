@@ -49,20 +49,17 @@ fg.read_output()
 
 figure(1, figsize=(11,6))
 
-bounds = [0,.1,.2,.3,.4,.5,1]
-cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[.2,.2,1],[0,0,1],\
-         [1,0,0]])
 
-bounds = [0,.1,.2,.4,.5,0.8,1.]
+bounds = 100*array([0,.1,.2,.4,.5,0.8,1.])
 cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[.2,.2,1],\
          [1,.5,.5], [1,0,0]])
 ax1 = axes()
 norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-contourf(fg.X,fg.Y,fg.s,bounds,cmap=cmap,norm=norm,extend='max')
+contourf(fg.X,fg.Y,100*fg.s,bounds,cmap=cmap,norm=norm,extend='max')
 cb = colorbar(extend='max')
-cb.set_label('meters / sec')
+cb.set_label('cm / sec')
 
-#contour(fg.X,fg.Y,fg.s,bounds,colors='w')
+#contour(fg.X,fg.Y,100*fg.s,bounds,colors='w')
 contour(fg.X,fg.Y,fg.B,[0],colors='k')
 
 ticklabel_format(format='plain',useOffset=False)

@@ -251,13 +251,13 @@ def plot_all(gauges, save=False, plotdir='.'):
     clf()
     subplot(211)
     plot(g.tdata,u_average,'b-')
-    title('u velocities at gauge %s' % g.id)
+    title('u (east-west velocity) at gauge %s' % g.id)
     ylabel('cm/sec')
     xlabel('Hours post-quake')
 
     subplot(212)
     plot(g.tdata,v_average,'b-')
-    title('v velocities at gauge %s' % g.id)
+    title('v (north-south velocity) at gauge %s' % g.id)
     ylabel('cm/sec')
     xlabel('Hours post-quake')
     if save: savefig(plotdir+"/fig16.png")
@@ -273,7 +273,7 @@ def plot_all(gauges, save=False, plotdir='.'):
         g = gauges[depths[i]]
         plot(g.tdata[i_ts],g.vdata[i_ts,2],'-',color=[R[i],G[i],B[i]])
     plot(g.tdata[i_ts],u_average[i_ts],'k',linewidth=3)
-    title('u velocities at gauge %s' % g.id)
+    title('u (east-west velocity) at gauge %s' % g.id)
     ylabel('cm/sec')
     xlim(t_start,t_end)
 
@@ -282,24 +282,24 @@ def plot_all(gauges, save=False, plotdir='.'):
         g = gauges[depths[i]]
         plot(g.tdata[i_ts],g.vdata[i_ts,3],'-',color=[R[i],G[i],B[i]])
     plot(g.tdata[i_ts],v_average[i_ts],'k',linewidth=3)
-    title('v velocities at gauge %s' % g.id)
+    title('v (north-south velocity) at gauge %s' % g.id)
     ylabel('cm/sec')
     xlabel('Hours post-quake')
     xlim(t_start,t_end)
     if save: savefig(plotdir+"/fig17.png")
     
     
-    figure(18)
+    figure(18, figsize=(10,10))
     clf()
     subplot(211)
-    t_start = -15.
-    t_end = 15.
+    t_start = -20.  # -15.
+    t_end = 30.  # 15.
     i_ts = find((g.tdata >= t_start) & (g.tdata <= t_end))
     for i in range(1,ng):
         g = gauges[depths[i]]
         plot(g.tdata[i_ts],g.vdata[i_ts,2],'-',color=[R[i],G[i],B[i]])
     #plot(g.tdata[i_ts],u_average[i_ts],'k',linewidth=3)
-    title('u velocities at gauge %s' % g.id)
+    title('u (east-west velocity) at gauge %s' % g.id)
     ylabel('cm/sec')
     xlim(t_start,t_end)
 
@@ -308,11 +308,12 @@ def plot_all(gauges, save=False, plotdir='.'):
         g = gauges[depths[i]]
         plot(g.tdata[i_ts],g.vdata[i_ts,3],'-',color=[R[i],G[i],B[i]])
     #plot(g.tdata[i_ts],v_average[i_ts],'k',linewidth=3)
-    title('v velocities at gauge %s' % g.id)
+    title('v (north-south velocity) at gauge %s' % g.id)
     ylabel('cm/sec')
     xlabel('Hours post-quake')
     xlim(t_start,t_end)
     if save: savefig(plotdir+"/fig18.png")
+
     
     
     figure(14,(12,6))

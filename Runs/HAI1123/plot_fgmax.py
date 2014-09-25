@@ -16,11 +16,16 @@ from clawpack.geoclaw import fgmax_tools
 
 
 def add_gauges(label=True):
-    plot([203.52825],[20.9021333],'wo',markersize=8)
-    plot([203.52825],[20.9021333],'k+',markersize=8)
+    fs = 15
+    dy = -.002
+    xy = [203.52825, 20.9021333]
+    plot([xy[0]], [xy[1]], 'wo',markersize=8)
+    plot([xy[0]], [xy[1]], 'k+',markersize=8)
     if label: text(203.529,20.9023,'1123',fontsize=15)
-    plot([203.530944],[20.895],'wo',markersize=8)
-    plot([203.530944],[20.895],'k+',markersize=8)
+
+    xy = [203.530944, 20.895]
+    plot([xy[0]], [xy[1]], 'wo',markersize=8)
+    plot([xy[0]], [xy[1]], 'k+',markersize=8)
     if label: text(203.5293,20.8951,'TG',fontsize=15)
 
 fg = fgmax_tools.FGmaxGrid()
@@ -30,21 +35,16 @@ fg.read_output(outdir='_mocha_1sep14')
 figure(1, figsize=(10,7))
 
 
-bounds = [0,1,2,3,4,5,6]
-bounds = [0,0.5,1,2,3,4,5]
-cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[.2,.2,1],[0,0,1],\
-                 [1,.7,.7], [1,.4,.4], [1,0,0]])
-
-bounds = [0,.25,.5,.75,1,2,4,5]
+bounds = 100*array([0,.25,.5,.75,1,2,4,5])  # cm/sec
 cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[0,0,1],\
                  [1,.7,.7], [1,.4,.4], [1,0,0]])
 ax1 = axes()
 norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-contourf(fg.X,fg.Y,fg.s,bounds,cmap=cmap,norm=norm,extend='max')
+contourf(fg.X,fg.Y,100*fg.s,bounds,cmap=cmap,norm=norm,extend='max')
 cb = colorbar(extend='max')
-cb.set_label('meters / sec')
+cb.set_label('cm / sec')
 
-contour(fg.X,fg.Y,fg.s,bounds,colors='w')
+contour(fg.X,fg.Y,100*fg.s,bounds,colors='w')
 contour(fg.X,fg.Y,fg.B,[0],colors='k')
 
 ticklabel_format(format='plain',useOffset=False)

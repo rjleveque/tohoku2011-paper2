@@ -25,6 +25,14 @@ def add_gauges(label=True):
     plot([xy[0]], [xy[1]], 'wo',markersize=8)
     plot([xy[0]], [xy[1]], 'k+',markersize=8)
     if label: text(xy[0], xy[1]+dy, '1126',fontsize=fs)
+    xy = [204.9437, 19.7306]
+    plot([xy[0]], [xy[1]], 'wo',markersize=8)
+    plot([xy[0]], [xy[1]], 'k+',markersize=8)
+    if label: text(xy[0]-.003, xy[1]+.001, 'TG',fontsize=fs)
+    xy = [204.92753, 19.74067]
+    plot([xy[0]], [xy[1]], 'wo',markersize=8)
+    plot([xy[0]], [xy[1]], 'k+',markersize=8)
+    if label: text(xy[0]-.001, xy[1]-.002, 'S2',fontsize=fs)
 
 fg = fgmax_tools.FGmaxGrid()
 fg.read_input_data('fgmax1.txt')
@@ -32,16 +40,16 @@ fg.read_output(outdir='_americano_10sep14')
 
 figure(1, figsize=(10,7))
 
-bounds = [0,.25,.5,.75,1,2,3,4]
+bounds = 100.*array([0,.25,.5,.75,1,2,3,4])  # cm/sec
 cmap = mpl.colors.ListedColormap([[1,1,1],[.8,.8,1],[.5,.5,1],[0,0,1],\
                  [1,.7,.7], [1,.4,.4], [1,0,0]])
 ax1 = axes()
 norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
-contourf(fg.X,fg.Y,fg.s,bounds,cmap=cmap,norm=norm,extend='max')
+contourf(fg.X,fg.Y,100*fg.s,bounds,cmap=cmap,norm=norm,extend='max')
 cb = colorbar(extend='max')
-cb.set_label('meters / sec')
+cb.set_label('cm / sec')
 
-contour(fg.X,fg.Y,fg.s,bounds,colors='w')
+contour(fg.X,fg.Y,100*fg.s,bounds,colors='w')
 contour(fg.X,fg.Y,fg.B,[0],colors='k')
 
 ticklabel_format(format='plain',useOffset=False)

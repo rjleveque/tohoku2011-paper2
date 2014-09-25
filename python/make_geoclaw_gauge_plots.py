@@ -67,22 +67,24 @@ def make_figs(gaugeno,rundir,outdir,veldir):
     axis([-smax,smax,-smax,smax])
     legend(loc=('lower right'))
     title('Velocities at gauge %s' % gaugeno)
-    xlabel('u in cm/sec')
-    ylabel('v in cm/sec')
-    fname = os.path.join(rundir,"figure%sa.png" % gaugeno)
+    #xlabel('u in cm/sec')
+    #ylabel('v in cm/sec')
+    xlabel('u (east-west velocity) in cm/sec')
+    ylabel('v (north-south velocity) in cm/sec')
+    fname = "../Figures/figure%sa.png" % gaugeno
     savefig(fname)
     print "Created ",fname
 
-    figure(102,figsize=(8,10))
+    figure(102)  #,figsize=(8,10))
     clf()
     subplot(2,1,1)
     plot(t_m,u_m,'ko-',linewidth=2)
     plot(t,u,'r',linewidth=3)
     #legend(['Observed','GeoClaw'],'upper left')
-    title('u velocities at gauge %s' % gaugeno)
+    title('u (east-west velocity) at gauge %s' % gaugeno)
     xlim(t.min(),t.max())
     ylim(-smax,smax)
-    ylabel('Velocities in cm/sec')
+    ylabel('cm / sec')
     #ylim(-80,40)
 
     subplot(2,1,2)
@@ -90,56 +92,59 @@ def make_figs(gaugeno,rundir,outdir,veldir):
     #plot(t_m[i_ts],v_m[i_ts],'bo-',linewidth=2)
     plot(t,v,'r',linewidth=3,label="GeoClaw")
     #legend(loc=('lower left'))
-    title('v velocities at gauge %s' % gaugeno)
+    title('v (north-south velocity) at gauge %s' % gaugeno)
+    
     xlim(t.min(),t.max())
     ylim(-smax,smax)
-    ylabel('Velocities in cm/sec')
+    ylabel('cm/sec')
     xlabel('Hours post-quake')
  
-    fname = os.path.join(rundir, "figure%sb.png" % gaugeno)
+    fname = "../Figures/figure%sb.png" % gaugeno
     savefig(fname)
     print "Created ",fname
     
 
+if __name__=="__main__":
 
-# Set gaugenos to list of all gauges studied.
-# HAIdirs and rundirs are dictionaries giving the path to observations and
-# simulations for each gauge.  rundirs[gaugeno] should be a subdirectory o
-# the Runs directory specified above.
-gaugenos, HAIdirs, rundirs = set_gauges()
+    # Set gaugenos to list of all gauges studied.
+    # HAIdirs and rundirs are dictionaries giving the path to observations and
+    # simulations for each gauge.  rundirs[gaugeno] should be a subdirectory o
+    # the Runs directory specified above.
+    gaugenos, HAIdirs, rundirs = set_gauges()
 
 
-# Which gauges to plot:
-gaugenos = []  # initialize empty, add to below.
+    # Which gauges to plot:
+    gaugenos = []  # initialize empty, add to below.
 
-# Dictionary to specify subdirectory of rundir containing fort.gauge file:
-# Normally '_output' for each rundir, but useful to allow specifying
-# different outdir when comparing results from different runs.
+    # Dictionary to specify subdirectory of rundir containing fort.gauge file:
+    # Normally '_output' for each rundir, but useful to allow specifying
+    # different outdir when comparing results from different runs.
 
-outdirs = {}  
-           
-if 0:
-    gaugenos = gaugenos + [1107] 
-    outdirs[1107] = '_output'
+    outdirs = {}  
+               
+    if 1:
+        gaugenos = gaugenos + [1107] 
+        outdirs[1107] = '_americano_1sep14'
 
-if 0:
-    gaugenos = gaugenos + [1116,1118,1119,1120,1121,1122]
+    if 1:
+        gaugenos = gaugenos + [1116,1118,1119,1120,1121,1122]
+        for gaugeno in [1116,1118,1119,1120,1121,1122]:
+            outdirs[gaugeno] = '_output'
+
+    if 1:
+        gaugenos = gaugenos + [1123] 
+        outdirs[1123] = '_mocha_1sep14'
+
+    if 1:
+        gaugenos = gaugenos + [1125,1126] 
+        for gaugeno in [1125,1126]:
+            outdirs[gaugeno] = '_americano_10sep14'
+            #outdirs[gaugeno] = '_americano_31aug14'
+
     for gaugeno in gaugenos:
-        outdirs[gaugeno] = '_output'
-
-if 0:
-    gaugenos = gaugenos + [1123] 
-    outdirs[1123] = '_output'
-
-if 1:
-    gaugenos = gaugenos + [1125,1126] 
-    for gaugeno in gaugenos:
-        outdirs[gaugeno] = '_mocha_11sep14'
-
-for gaugeno in gaugenos:
-    rundir = Runs + rundirs[gaugeno]
-    HAIdir = HAIdirs[gaugeno]
-    outdir = outdirs.get(gaugeno, '_output')  
-    make_figs(gaugeno,rundir,outdir,HAIdir)
-    #print "Created figures in ", rundir
+        rundir = Runs + rundirs[gaugeno]
+        HAIdir = HAIdirs[gaugeno]
+        outdir = outdirs.get(gaugeno, '_output')  
+        make_figs(gaugeno,rundir,outdir,HAIdir)
+        #print "Created figures in ", rundir
 
