@@ -252,6 +252,18 @@ def setrun(claw_pkg='geoclaw'):
     # Tide gauge:
     gauges.append([7760, 204.9437, 19.7306,  7.5*3600., 1.e9]) #Hilo
 
+    # Synthetic gauge S2:
+    gauges.append([2222, 204.92753, 19.74067, 7.5*3600., 1.e9]) # S2
+
+    if 0:
+        # Array of synthetic gauges originally used to find S2 location:
+        dx = .0005
+        for i in range(6):
+            x = 204.93003 - i*dx
+            for j in range(5):
+                y = 19.74167 + (j-2)*dx
+                gauges.append([10*(j+1)+i+1, x, y,  7.5*3600., 1.e9]) 
+
 
 
 
