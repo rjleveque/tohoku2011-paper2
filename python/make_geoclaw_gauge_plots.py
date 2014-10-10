@@ -10,7 +10,6 @@ except:
     matplotlib.use('Agg')  # set to image backend 
 
 import os,sys
-from make_gauges import make_figs
 from gaugedirs import set_gauges
 from clawpack.visclaw.data import ClawPlotData
 from pylab import *
@@ -122,23 +121,23 @@ if __name__=="__main__":
 
     outdirs = {}  
                
-    if 1:
+    if 0:
         gaugenos = gaugenos + [1107] 
-        outdirs[1107] = '_americano_1sep14'
+        outdirs[1107] = '_output'
 
     if 1:
         gaugenos = gaugenos + [1116,1118,1119,1120,1121,1122]
         for gaugeno in [1116,1118,1119,1120,1121,1122]:
             outdirs[gaugeno] = '_output'
 
-    if 1:
+    if 0:
         gaugenos = gaugenos + [1123] 
-        outdirs[1123] = '_mocha_1sep14'
+        outdirs[1123] = '_output'
 
     if 1:
         gaugenos = gaugenos + [1125,1126] 
         for gaugeno in [1125,1126]:
-            outdirs[gaugeno] = '_americano_10sep14'
+            outdirs[gaugeno] = '_output'
             #outdirs[gaugeno] = '_americano_31aug14'
 
     for gaugeno in gaugenos:

@@ -30,7 +30,7 @@ def add_gauges(label=True):
 
 fg = fgmax_tools.FGmaxGrid()
 fg.read_input_data('fgmax1.txt')
-fg.read_output(outdir='_mocha_1sep14')
+fg.read_output(outdir='_output')
 
 figure(1, figsize=(10,7))
 
@@ -78,11 +78,11 @@ show()
 
 if 1:
     figure(2)
-    fname = 'Kahului_gauges.png'
+    fname = '../../Figures/Kahului_gauges.png'
     savefig(fname)
     print 'Created ', fname
 
     figure(1)
-    fname = 'Kahului_smax.png'
+    fname = '../../Figures/Kahului_smax.png'
     savefig(fname)
     print 'Created ', fname

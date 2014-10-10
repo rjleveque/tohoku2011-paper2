@@ -14,7 +14,7 @@ from clawpack.visclaw.data import ClawPlotData
 save_plot = True
 
 TGdir = os.path.abspath('../TideGauges')
-outdir = '../Runs/HAI1125-26/_americano_31aug14'
+outdir = '../Runs/HAI1125-26/_output'
 
 g_obs = numpy.loadtxt(os.path.join(TGdir, 'TG_1617760_detided.txt'))
 

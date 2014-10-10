@@ -36,7 +36,7 @@ def add_gauges(label=True):
 
 fg = fgmax_tools.FGmaxGrid()
 fg.read_input_data('fgmax1.txt')
-fg.read_output(outdir='_americano_10sep14')
+fg.read_output(outdir='_output')
 
 figure(1, figsize=(10,7))
 
@@ -81,11 +81,11 @@ show()
 
 if 1:
     figure(2)
-    fname = 'Hilo_gauges.png'
+    fname = '../../Figures/Hilo_gauges.png'
     savefig(fname)
     print 'Created ', fname
 
     figure(1)
-    fname = 'Hilo_smax.png'
+    fname = '../../Figures/Hilo_smax.png'
     savefig(fname)
     print 'Created ', fname

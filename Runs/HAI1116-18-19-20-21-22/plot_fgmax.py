@@ -45,7 +45,7 @@ def add_gauges(label=True):
 
 fg = fgmax_tools.FGmaxGrid()
 fg.read_input_data('fgmax1.txt')
-fg.read_output()
+fg.read_output(outdir='_output')
 
 figure(1, figsize=(11,6))
 
@@ -93,11 +93,11 @@ show()
 
 if 1:
     figure(2)
-    fname = 'channel_gauges.png'
+    fname = '../../Figures/channel_gauges.png'
     savefig(fname)
     print 'Created ', fname
 
     figure(1)
-    fname = 'channel_smax.png'
+    fname = '../../Figures/channel_smax.png'
     savefig(fname)
     print 'Created ', fname
