@@ -1,5 +1,4 @@
 
-*Work in Progress*
 
 Code and data repository for the paper "Validating Velocities in the GeoClaw
 Tsunami Model using Observations Near Hawaii from the 2011 Tohoku Tsunami"
@@ -43,9 +42,11 @@ The directory *python* contains Python scripts and modules to detide the
 data and make the plots:
 
     ```
-    python make_obs_figures.py   # make the figures of observation data
+    python make_obs_plots.py     # make the figures of observation data
+								 # creates Figures/uv_depth*.png
     python make_obs_index.py     # make the plots.html and index.html files
     python detide_compare.py     # detide via harmonic and polynomial fits
+								 # creates Figures/uv_tide*.png
     ```
 
     
@@ -53,20 +54,23 @@ To run the simulations
 ----------------------
 
 Install Clawpack and insure that you have a suitable version.
-Some features used in this code will appear in Clawpack 5.2.1.
+    http://www.clawpack.org/installing.html
 
-    The following versions should work:
+Final runs were verified using Clawpack 5.2.1.
+(Earlier versions give essentially identical results, but some of the
+routines for making and plotting fgmax grids showing max speed do not exist
+in earlier versions).
 
-    amrclaw commit 03702ad7
-    geoclaw commit 8ceb0615
 
 
 In each of the directories `Runs/HAI*` do the following:
 
 ```       
     python make_fgmax_grid.py
-    make .exe     # will compile with OpenMP flags 
-    make .plots   # will run for several hours
+    make .exe     # Makefile is set to compile with OpenMP flags 
+    make .output   # will run for several hours
+	python plot_fgmax.py  # to make spatial plots of maximum velocity recorded
+                          # and save to Figures subdirectory
 ```       
 
 Then postprocess the results:
@@ -74,11 +78,13 @@ Then postprocess the results:
 In directory `python`:
 
 ```       
-    python plot_TG_1612340.py  # will create TideGauges/TG_1612340_compare.png
-    python plot_TG_1615680.py  # will create TideGauges/TG_1615680_compare.png
-    python plot_TG_1617760.py  # will create TideGauges/TG_1617760_compare.png
+    python plot_TG_1612340.py  # will create Figures/TG_1612340_compare.png
+    python plot_TG_1615680.py  # will create Figures/TG_1615680_compare.png
+    python plot_TG_1617760.py  # will create Figures/TG_1617760_compare.png
 
-    python make_gauge_figs.py
+    python make_geoclaw_gauge_plots.py  # will create Figures/figure*.png 
+	python HAI1107_compare_gauges.py   # will create plots comparing HAI1107 and S1
+                                       # Figures/HAI1107compare*.png
 
 ```       
 
