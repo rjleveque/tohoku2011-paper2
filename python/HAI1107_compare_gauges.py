@@ -14,7 +14,7 @@ from pylab import *
 from clawpack.visclaw.data import ClawPlotData
 
 rundir = '../Runs/HAI1107'
-outdir = os.path.join(rundir, '_americano_1sep14')
+outdir = os.path.join(rundir, '_output')
 obsdir = os.path.abspath('../Observations')
 
 pd = ClawPlotData()
@@ -62,11 +62,11 @@ show()
 
 if 1:
     figure(2)
-    fname = os.path.join(rundir, 'HAI1107compareS.png')
+    fname = '../Figures/HAI1107compareS.png'
     savefig(fname)
     print "created ",fname
     figure(1)
-    fname = os.path.join(rundir, 'HAI1107compareEta.png')
+    fname = '../Figures/HAI1107compareEta.png'
     savefig(fname)
     print "created ",fname
 
